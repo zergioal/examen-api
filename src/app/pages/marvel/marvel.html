@@ -1,0 +1,10 @@
+<h2>🦸 Personajes de Marvel</h2>
+<p *ngIf="loading">Cargando personajes...</p>
+
+<div class="marvel-grid" *ngIf="!loading">
+  <div class="marvel-card" *ngFor="let char of characters">
+    <img [src]="char.thumbnail.path + '.' + char.thumbnail.extension" [alt]="char.name" />
+    <h3>{{ char.name }}</h3>
+    <p>{{ char.description || 'Sin descripción disponible.' }}</p>
+  </div>
+</div>

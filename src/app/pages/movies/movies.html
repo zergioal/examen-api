@@ -1,0 +1,13 @@
+<h2>🎬 Películas populares</h2>
+<p *ngIf="loading">Cargando...</p>
+
+<div class="movies-grid" *ngIf="!loading">
+  <div class="movie-card" *ngFor="let m of movies">
+    <img *ngIf="m.poster_path" [src]="imageBase + m.poster_path" [alt]="m.title" />
+    <div class="movie-info">
+      <h3>{{ m.title }}</h3>
+      <p>⭐ {{ m.vote_average }}</p>
+      <p>{{ m.release_date }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h2>🕵️ Personas buscadas (FBI)</h2>
+
+<p *ngIf="loading">Cargando datos del FBI...</p>
+
+<div class="fbi-grid" *ngIf="!loading">
+  <div class="fbi-card" *ngFor="let p of wanted">
+    <img *ngIf="p.images && p.images.length > 0" [src]="p.images[0].original" [alt]="p.title" />
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+    <a [href]="p.url" target="_blank">Ver más</a>
+  </div>
+</div>

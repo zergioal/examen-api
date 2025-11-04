@@ -1,0 +1,31 @@
+h2 {
+  margin-bottom: 1rem;
+}
+
+.movies-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-info {
+  padding: 0.5rem 0.75rem 1rem;
+}
+
+.movie-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}

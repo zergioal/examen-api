@@ -1,0 +1,11 @@
+<h2>🗣️ Frase del día</h2>
+
+<div class="quote-card">
+  <p *ngIf="loading">Cargando frase...</p>
+
+  <ng-container *ngIf="!loading">
+    <p class="quote">“{{ quote }}”</p>
+    <p class="author">— {{ author }}</p>
+    <button class="btn" (click)="loadQuote()">🔁 Otra frase</button>
+  </ng-container>
+</div>

@@ -1,0 +1,8 @@
+{
+  "/freetogame": {
+    "target": "https://www.freetogame.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

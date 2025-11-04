@@ -1,0 +1,34 @@
+<h2>🎮 Juegos FreeToGame</h2>
+
+<div class="filters">
+  <button (click)="changeCategory('all')" [class.active]="selectedCategory === 'all'">Todos</button>
+  <button (click)="changeCategory('shooter')" [class.active]="selectedCategory === 'shooter'">
+    Shooter
+  </button>
+  <button (click)="changeCategory('mmorpg')" [class.active]="selectedCategory === 'mmorpg'">
+    MMORPG
+  </button>
+  <button (click)="changeCategory('strategy')" [class.active]="selectedCategory === 'strategy'">
+    Estrategia
+  </button>
+</div>
+
+<p *ngIf="loading">Cargando juegos...</p>
+
+<p *ngIf="!loading && corsBlocked" class="warning">
+  La API real bloqueó la petición por CORS. Mostrando datos de ejemplo.
+  <br />
+  Activa una extensión CORS o usa <code>ng serve --proxy-config proxy.conf.json</code>.
+</p>
+
+<div class="games-grid" *ngIf="!loading">
+  <div class="game-card" *ngFor="let g of games">
+    <img [src]="g.thumbnail" [alt]="g.title" />
+    <div class="game-body">
+      <h3>{{ g.title }}</h3>
+      <p>{{ g.short_description }}</p>
+      <p class="meta">{{ g.genre }} · {{ g.platform }}</p>
+      <a [href]="g.game_url" target="_blank">🎮 Jugar</a>
+    </div>
+  </div>
+</div>

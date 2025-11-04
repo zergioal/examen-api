@@ -1,0 +1,14 @@
+<h2>🌤️ Clima actual - Cochabamba</h2>
+
+<div class="weather-wrapper" *ngIf="!loading && data; else loadingTpl">
+  <div class="weather-card">
+    <div class="temp">{{ data.current_weather.temperature }} °C</div>
+    <div class="desc">{{ getWeatherText(data.current_weather.weathercode) }}</div>
+    <div class="extra">Viento: {{ data.current_weather.windspeed }} km/h</div>
+    <div class="time">{{ data.current_weather.time | date : 'short' }} · {{ data.timezone }}</div>
+  </div>
+</div>
+
+<ng-template #loadingTpl>
+  <p>Cargando clima...</p>
+</ng-template>

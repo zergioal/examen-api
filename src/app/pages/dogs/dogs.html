@@ -1,0 +1,13 @@
+<h2>🐶 Random Dog</h2>
+<p class="hint">Haz clic en el botón para ver otra imagen</p>
+
+<div class="dogs-wrapper">
+  <div class="dog-card">
+    <div class="img-box">
+      <p *ngIf="loading" class="loading">Cargando perrito...</p>
+      <img *ngIf="!loading && imageUrl" [src]="imageUrl" alt="Random dog" />
+    </div>
+
+    <button class="reload-btn" (click)="getRandomDog()">🔄 Ver otro perro</button>
+  </div>
+</div>

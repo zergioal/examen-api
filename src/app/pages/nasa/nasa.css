@@ -1,0 +1,62 @@
+.nasa-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nasa-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem 1.25rem 1.25rem;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.nasa-card:hover {
+  transform: translateY(-4px);
+}
+
+.img-box {
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.desc {
+  color: #555;
+  line-height: 1.4;
+  max-height: 6.2rem;
+  overflow: auto;
+}
+
+/* botón */
+.btn-next {
+  align-self: center;
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-next:hover {
+  background: #005dc1;
+}

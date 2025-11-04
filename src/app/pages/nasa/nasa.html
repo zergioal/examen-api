@@ -1,0 +1,15 @@
+<h2>🛰️ NASA Image Library</h2>
+
+<p *ngIf="loading">Cargando imagen del espacio...</p>
+
+<div *ngIf="!loading && item" class="nasa-wrapper">
+  <div class="nasa-card">
+    <div class="img-box" *ngIf="item.imageUrl">
+      <img [src]="item.imageUrl" [alt]="item.title" />
+    </div>
+    <h3>{{ item.title }}</h3>
+    <p class="desc">{{ item.description }}</p>
+
+    <button class="btn-next" (click)="nextImage()">🔁 Ver otra imagen</button>
+  </div>
+</div>
